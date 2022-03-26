@@ -1,16 +1,16 @@
-<?php /* Template Name: BackpackDrive */ ?>
+<?php /* Template Name: CampDrive */ ?>
 <?php get_header(); ?>
 
 <script>
     // Add assets url path to global scope for our JS to use for loading files
-    window.backpackDriveAssetsURL = "<?php print content_url('uploads/backpack-drive-assets/'); ?>";
+    window.campDriveAssetsURL = "<?php print content_url('uploads/camp-drive-assets/'); ?>";
     window.siteURL = "<?php print get_site_url() ?>"
 </script>
 
 <style>
     /* We can't do this in the main css file since it uses PHP to get the file path */
     .tt-tag-main {
-        background: url(<?php print content_url('uploads/backpack-drive-assets/images/tagimage.png'); ?>);
+        background: url(<?php print content_url('uploads/camp-drive-assets/images/tagimage.png'); ?>);
         background-repeat: no-repeat;
         background-size: 600px 300px;
         background-position: center;
@@ -24,14 +24,14 @@
             <div class="jumbotron bg-white px-0 mb-0 pb-0">
                 <picture>
                     <img class="img-fluid rounded mx-auto" style="object-fit:cover;" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_200.jpg 200w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_464.jpg 464w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_664.jpg 664w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_879.jpg 879w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1037.jpg 1037w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1185.jpg 1185w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1347.jpg 1347w,
-                    <?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1400.jpg 1400w" src="<?php print content_url('uploads/backpack-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1400.jpg 1400w" alt="Happy kids with backpacks">
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_200.jpg 200w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_464.jpg 464w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_664.jpg 664w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_879.jpg 879w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1037.jpg 1037w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1185.jpg 1185w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1347.jpg 1347w,
+                    <?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1400.jpg 1400w" src="<?php print content_url('uploads/camp-drive-assets/images/backpack-hero/'); ?>backpack-banner_uncwzr_c_scale,w_1400.jpg 1400w" alt="Happy kids with backpacks">
                 </picture>
             </div>
         </div>
@@ -59,22 +59,10 @@
             <div class="card">
                 <h5 class="card-header text-center" style="font-size:3rem;">Choose an age group to donate</h5>
                 <div class="card-body row" id="button-row">
-                    <div class="col-4 text-center" id="age-group-container-1">
-                        <button id="age-group-button-1" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/backpack-drive-assets/images/pack-blue.png'); ?>" alt="Present for 0-6">
+                    <div class="col-4 text-center" id="camp-tag-container">
+                        <button id="camp-tag-button" class="mx-auto">
+                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/camp-drive-assets/images/pack-blue.png'); ?>" alt="Present for 0-6">
                             <div class="tt-button-label">Age 0-6</div>
-                        </button class="button">
-                    </div>
-                    <div class="col-4 text-center" id="age-group-container-2">
-                        <button id="age-group-button-2" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/backpack-drive-assets/images/pack-unicorn.png'); ?>" alt="Present for 7-12">
-                            <div class="tt-button-label">Age 7-12</div>
-                        </button class="button">
-                    </div>
-                    <div class="col-4 text-center" id="age-group-container-3">
-                        <button id="age-group-button-3" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/backpack-drive-assets/images/pack-grey.png'); ?>" alt="Present for 13-18">
-                            <div class="tt-button-label">Age 13-18</div>
                         </button class="button">
                     </div>
                 </div>
@@ -149,7 +137,7 @@ $toyPicturesFolder = ;
 $toySrc = $toyPicturesFolder . $toy . ".jpg";
 
 // List of names with genders
-$nameGenderPairs = file_get_contents(content_url('uploads/backpack-drive-assets/humanChildren.json'));
+$nameGenderPairs = file_get_contents(content_url('uploads/camp-drive-assets/humanChildren.json'));
 $realHumanChildren = json_decode($nameGenderPairs);
 $randomNumber = rand(0, count($realHumanChildren) - 1);
 $name = $realHumanChildren[$randomNumber][0];

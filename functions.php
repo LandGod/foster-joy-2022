@@ -46,6 +46,22 @@ function afs4kids_scripts() {
 			date('ymd-Gis', filemtime(get_stylesheet_directory() . '/js/backpack-drive.js')), 
 			true
 		);
+	} elseif (is_page_template('camp-drive.php')) {
+		wp_enqueue_style("bootstrap4", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"); // Load Bootstrap css
+		// Supply file updated time as version number so that the most recent version is always used
+		wp_enqueue_style(
+			'camp-drive-css', 
+			get_stylesheet_directory_uri() . '/css/camp-drive.css', 
+			array(), 
+			date('ymd-Gis', filemtime(get_stylesheet_directory() . '/css/camp-drive.css'))
+		);
+		wp_enqueue_script(
+			'camp-drive-js', 
+			get_stylesheet_directory_uri() . '/js/camp-drive.js', 
+			array(), 
+			date('ymd-Gis', filemtime(get_stylesheet_directory() . '/js/camp-drive.js')), 
+			true
+		);
 	}
 };
 

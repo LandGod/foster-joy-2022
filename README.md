@@ -1,0 +1,3 @@
+The main PHP files and the 'js' and 'css' folders can be found in the main theme directory (per the google drive instructions)
+
+I created a new assets folder for the camp drive (although everything in it except for the activity/toy profiles is just the stuff copied from the backpack drive). You can find this folder on the server under wp-content/uploads. Folder is named camp-drive-assets (because I'm extremely creative).
