@@ -1,0 +1,17 @@
+[
+    {
+        "name": "CMG Financial",
+        "logo": "cmg.jpg",
+        "link": "https://www.cmgfi.com/"
+    },
+    {
+        "name": "Slalom",
+        "logo": "slalom.png",
+        "link": "https://www.slalom.com/home"
+    },
+    {
+        "name": "Simpson-Tacher",
+        "logo": "simpson-tacher-logo.jpg",
+        "link": "https://www.stblaw.com/"
+    }
+]
