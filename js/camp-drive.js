@@ -120,12 +120,17 @@ async function tagTreeMain() {
     // You'll want to do this if regenerating without clicking off
     window.tagAddSwitch = noClickOff ? false : true;
     // Set event listener for re-rolling the tag in place
-    tagElementActual.addEventListener("click", (ev) => {
-      tagElementActual.remove();
-      reGenerateTagData();
-      tagElementActual = generateTag();
-      addTagToDOM(true);
-    });
+    const newTagButtons =
+      document.getElementsByClassName("re-roll-button") || [];
+    const newTagButton = newTagButtons[0];
+    if (newTagButton) {
+      newTagButton.addEventListener("click", (ev) => {
+        tagElementActual.remove();
+        reGenerateTagData();
+        tagElementActual = generateTag();
+        addTagToDOM(true);
+      });
+    }
   }
 
   // Generate new tag & store it (this used to be an array, so it might be a bit redundant at this point, but I have a headache, so whatever)
@@ -143,12 +148,12 @@ async function tagTreeMain() {
         window.tagAddSwitch = false;
         return;
       }
-      let tagNum = Number(window.currentTag.dataset.group);
       window.currentTag.remove();
       window.currentTag = null;
       reGenerateTagData();
       tagElementActual = generateTag();
     }
+    // Else do nothing
   });
 
   function isTag(elem) {
