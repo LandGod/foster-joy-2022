@@ -17,9 +17,7 @@ async function tagTreeMain() {
   const rawProfiles = await fetch(campDriveAssetsURL + "camps.json");
   const profilesList = await rawProfiles.json();
 
-  const rawNameFile = await fetch(
-    campDriveAssetsURL + "humanChildren.json"
-  );
+  const rawNameFile = await fetch(campDriveAssetsURL + "humanChildren.json");
   const namesList = await rawNameFile.json();
 
   const GENDERS = {
@@ -32,9 +30,9 @@ async function tagTreeMain() {
   };
 
   const confirmationBaseULR =
-    window.siteURL + "/education-drive-confirmation-page/";
-  const donationLink =
-    "https://alternativefamilyservices.humanitru.com/donate?page=foster-learning&amount=50&options=100%2C75%2C25%2C10&tribute=true&ach=true&address=optional";
+    window.siteURL + "/foster-hope-2022-confirmation-page/";
+  // const donationLink =
+  //   "https://alternativefamilyservices.humanitru.com/donate?page=foster-learning&amount=50&options=100%2C75%2C25%2C10&tribute=true&ach=true&address=optional";
 
   // Return random number between 0 and n
   function rand(n) {
@@ -93,24 +91,16 @@ async function tagTreeMain() {
         <p class="tt-tag tt-tag-age">Age ${tag.age}</p>
         <p class="tt-tag tt-tag-toy">Wants donation for ${tag.toy}</p>
         <div class="tt-tag tt-tag-buttons"> 
-            <a class="tt-tag btn btn-danger btn-afsOrange" href="${donationLink}?kidname=${
+            <a class="tt-tag btn btn-danger btn-afsOrange" href="${confirmationBaseULR}?kidname=${
       tag.name
     }+${tag.initial}&toy=${encodeURIComponent(tag.toy)}&age=${
       tag.age
-    }">Donate Money for this activity</a>
+    }">Adopt this Wish</a>
             <button class="tt-tag btn btn-danger btn-afsOrange re-roll-button" data-group="${1}">New tag</button>
         </div>
         
         <div class="tt-tag tt-tag-buttons-small"> 
-            <a 
-              class="tt-tag btn btn-sm btn-danger btn-afsOrange" 
-              href="${confirmationBaseULR}?kidname=${tag.name}+${
-      tag.initial
-    }&toy=${encodeURIComponent(tag.toy)}&age=${tag.age}"
-            >
-              Buy Item
-            </a>
-            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money for Supplies</a>
+            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${confirmationBaseULR}">Adopt this Wish</a>
             <button class="tt-tag btn btn-sm btn-danger btn-afsOrange re-roll-button" data-group="${1}">New tag</button>
         </div>
     `;
