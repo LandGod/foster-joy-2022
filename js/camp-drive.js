@@ -100,7 +100,11 @@ async function tagTreeMain() {
         </div>
         
         <div class="tt-tag tt-tag-buttons-small"> 
-            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${confirmationBaseULR}">Adopt this Wish</a>
+            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${confirmationBaseULR}?kidname=${
+      tag.name
+    }+${tag.initial}&toy=${encodeURIComponent(tag.toy)}&age=${
+      tag.age
+    }">Adopt this Wish</a>
             <button class="tt-tag btn btn-sm btn-danger btn-afsOrange re-roll-button" data-group="${1}">New tag</button>
         </div>
     `;
