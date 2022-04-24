@@ -89,7 +89,7 @@ async function tagTreeMain() {
           ${tag.name} ${tag.initial}.
         </p>
         <p class="tt-tag tt-tag-age">Age ${tag.age}</p>
-        <p class="tt-tag tt-tag-toy">Wants donation for ${tag.toy}</p>
+        <p class="tt-tag tt-tag-toy">${tag.toy}</p>
         <div class="tt-tag tt-tag-buttons"> 
             <a class="tt-tag btn btn-danger btn-afsOrange" href="${confirmationBaseULR}?kidname=${
       tag.name
@@ -126,15 +126,16 @@ async function tagTreeMain() {
     // Set event listener for re-rolling the tag in place
     const newTagButtons =
       document.getElementsByClassName("re-roll-button") || [];
-    const newTagButton = newTagButtons[0];
-    if (newTagButton) {
-      newTagButton.addEventListener("click", (ev) => {
-        tagElementActual.remove();
-        reGenerateTagData();
-        tagElementActual = generateTag();
-        addTagToDOM(true);
-      });
-    }
+    [...newTagButtons].forEach((tButton) => {
+      if (tButton) {
+        tButton.addEventListener("click", (ev) => {
+          tagElementActual.remove();
+          reGenerateTagData();
+          tagElementActual = generateTag();
+          addTagToDOM(true);
+        });
+      }
+    });
   }
 
   // Generate new tag & store it (this used to be an array, so it might be a bit redundant at this point, but I have a headache, so whatever)
